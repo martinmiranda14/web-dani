@@ -180,6 +180,36 @@ body::before {
   letter-spacing: -0.05em;
 }
 
+/* ─── HERO PHOTO ─── */
+.hero-photo-frame {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 280px;
+  height: 340px;
+  z-index: 3;
+  opacity: 0;
+  animation: fadeUp 1.2s 1s forwards;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(15%) contrast(1.05);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.hero-photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Scroll indicator */
 .scroll-hint {
   position: absolute;
