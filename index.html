@@ -6,6 +6,7 @@
   <title>Danitza Villarroel Orrego — Directora de Orquesta</title>
   <meta name="description" content="Danitza Villarroel Orrego — Directora de orquesta, violinista, profesora y gestora cultural de Valparaíso, Chile.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,13 +15,14 @@
 <nav id="main-nav">
   <a href="#hero" class="nav-logo">DVO</a>
   <div class="nav-links">
-    <a href="#intro">Biografía</a>
-    <a href="#trayectoria">Trayectoria</a>
-    <a href="#logros">Logros</a>
-    <a href="#roles">Perfil</a>
-    <a href="#alimapu">Alimapu</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#intro" data-i18n="nav.bio">Biografía</a>
+    <a href="#trayectoria" data-i18n="nav.trajectory">Trayectoria</a>
+    <a href="#logros" data-i18n="nav.achievements">Logros</a>
+    <a href="#roles" data-i18n="nav.profile">Perfil</a>
+    <a href="#alimapu" data-i18n="nav.alimapu">Alimapu</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
   </div>
+  <button class="lang-toggle">EN</button>
   <button class="nav-toggle" aria-label="Menú">
     <span></span><span></span><span></span>
   </button>
@@ -29,14 +31,14 @@
 <!-- ════ HERO ════ -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Directora de Orquesta · Violinista · Profesora · Gestora Cultural</p>
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Directora de Orquesta · Violinista · Profesora · Gestora Cultural</p>
     <h1 class="hero-name">
       Danitza<br>
       <span>Villarroel</span>
       Orrego
     </h1>
-    <p class="hero-subtitle">La música que acerca mundos</p>
-    <p class="hero-location">Valparaíso, Chile</p>
+    <p class="hero-subtitle" data-i18n="hero.subtitle">La música que acerca mundos</p>
+    <p class="hero-location" data-i18n="hero.location">Valparaíso, Chile</p>
   </div>
 
   <div class="hero-right">
@@ -71,7 +73,7 @@
 
   <div class="scroll-hint">
     <div class="scroll-line"></div>
-    <span>Descubrir</span>
+    <span data-i18n="hero.scroll">Descubrir</span>
   </div>
 </section>
 
@@ -83,22 +85,22 @@
 </div>
 
 <section id="intro">
-  <blockquote class="intro-quote reveal">
+  <blockquote class="intro-quote reveal" data-i18n="intro.quote">
     La música como puente entre el arte y la comunidad.
   </blockquote>
   <div class="intro-columns">
     <div class="intro-left">
-      <p class="intro-text reveal">
+      <p class="intro-text reveal" data-i18n="intro.p1">
         Danitza Villarroel Orrego es directora de orquesta, violinista, profesora y gestora cultural.
         Licenciada en Arte, Tecnología y Gestión Musical por la Universidad de Valparaíso,
         Diplomada en Dirección de Orquestas Juveniles e Infantiles y en Patrimonio Cultural, con doble mención, de la Universidad Alberto Hurtado.
         Ha recibido formación en dirección orquestal con maestros como Rodolfo Fischer, Helmuth Reichel, Paolo Bortolameolli y Emmanuel Siffert.
       </p>
-      <p class="intro-text reveal">
+      <p class="intro-text reveal" data-i18n="intro.p2">
         Proveniente de la educación pública y de una familia sencilla, descubrió su pasión entre los cinco y siete años en la Escuela Ramón Barros Luco de Valparaíso.
         Hoy lidera proyectos orquestales que democratizan la cultura clásica y visibilizan el rol de la mujer en la dirección musical.
       </p>
-      <p class="intro-text reveal">
+      <p class="intro-text reveal" data-i18n="intro.p3">
         Es fundadora y directora de la Orquesta Filarmónica Alimapu (2017 - Actual) y la Epic Orquesta (2023 - 2024).
         Ha dirigido la Orquesta Sinfónica de Antofagasta, la Orquesta de Cámara de Valdivia y la Orquesta de Cámara del Municipal de Santiago.
         Como violinista, ha grabado con el Ensamble Trasatlántico, Luxferre, Charawilla y Seba Vergara,
@@ -113,90 +115,90 @@
 
 <!-- ════ TRAYECTORIA ════ -->
 <section id="trayectoria">
-  <p class="section-label reveal">Trayectoria</p>
+  <p class="section-label reveal" data-i18n="tray.label">Trayectoria</p>
   <div class="timeline">
     <div class="timeline-item reveal">
       <div class="timeline-year">2007</div>
       <div class="timeline-content">
-        <h3>Violinista — Orquesta CORMUVAL</h3>
-        <p>Ingresa como violinista a la Orquesta de la Corporación Municipal de Valparaíso (CORMUVAL), con sede en la Escuela Ramón Barros Luco.</p>
+        <h3 data-i18n="tray.2007.title">Violinista — Orquesta CORMUVAL</h3>
+        <p data-i18n="tray.2007.desc">Ingresa como violinista a la Orquesta de la Corporación Municipal de Valparaíso (CORMUVAL), con sede en la Escuela Ramón Barros Luco.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2010</div>
       <div class="timeline-content">
-        <h3>Violinista — Orquesta Sinfónica Juvenil Regional FOJI</h3>
-        <p>Se integra a la Orquesta Sinfónica Juvenil Regional de Valparaíso, de la Fundación de Orquestas Juveniles e Infantiles de Chile (FOJI), donde permanece durante diez años enriqueciendo su formación como intérprete.</p>
+        <h3 data-i18n="tray.2010.title">Violinista — Orquesta Sinfónica Juvenil Regional FOJI</h3>
+        <p data-i18n="tray.2010.desc">Se integra a la Orquesta Sinfónica Juvenil Regional de Valparaíso, de la Fundación de Orquestas Juveniles e Infantiles de Chile (FOJI), donde permanece durante diez años enriqueciendo su formación como intérprete.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2013</div>
       <div class="timeline-content">
-        <h3>Estudios de piano</h3>
-        <p>Comienza estudios de piano con el maestro Ítalo Olivares Cañete, profundizando su comprensión de la música desde múltiples ángulos interpretativos.</p>
+        <h3 data-i18n="tray.2013.title">Estudios de piano</h3>
+        <p data-i18n="tray.2013.desc">Comienza estudios de piano con el maestro Ítalo Olivares Cañete, profundizando su comprensión de la música desde múltiples ángulos interpretativos.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2016</div>
       <div class="timeline-content">
-        <h3>Licenciatura — Universidad de Valparaíso</h3>
-        <p>Inicia la carrera de Arte, Tecnología y Gestión Musical en la Universidad de Valparaíso.</p>
+        <h3 data-i18n="tray.2016.title">Licenciatura — Universidad de Valparaíso</h3>
+        <p data-i18n="tray.2016.desc">Inicia la carrera de Arte, Tecnología y Gestión Musical en la Universidad de Valparaíso.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2017</div>
       <div class="timeline-content">
-        <h3>Fundación Orquesta Filarmónica Alimapu</h3>
-        <p>Funda la Orquesta Filarmónica Alimapu tras organizar un concierto solidario con 60 músicos en el Teatro Municipal de Valparaíso a beneficio de los damnificados por los incendios forestales.</p>
+        <h3 data-i18n="tray.2017.title">Fundación Orquesta Filarmónica Alimapu</h3>
+        <p data-i18n="tray.2017.desc">Funda la Orquesta Filarmónica Alimapu tras organizar un concierto solidario con 60 músicos en el Teatro Municipal de Valparaíso a beneficio de los damnificados por los incendios forestales.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2018</div>
       <div class="timeline-content">
-        <h3>Revelación como directora</h3>
-        <p>En el encuentro internacional "Jóvenes por la Música y la Vida" en Bolivia, dirige una orquesta de más de 500 músicos de distintos países. Ese momento confirmó su vocación como directora.</p>
+        <h3 data-i18n="tray.2018.title">Revelación como directora</h3>
+        <p data-i18n="tray.2018.desc">En el encuentro internacional "Jóvenes por la Música y la Vida" en Bolivia, dirige una orquesta de más de 500 músicos de distintos países. Ese momento confirmó su vocación como directora.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2019</div>
       <div class="timeline-content">
-        <h3>Asociación Filarmónica del Pacífico</h3>
-        <p>Funda oficialmente la Asociación Filarmónica del Pacífico, figura que ampara la Orquesta Filarmónica Alimapu, estableciendo sus valores y misión. Proyecto autogestionado y de carácter profesionalizante que busca acortar la distancia entre el mundo orquestal y la comunidad de la Región de Valparaíso.</p>
+        <h3 data-i18n="tray.2019.title">Asociación Filarmónica del Pacífico</h3>
+        <p data-i18n="tray.2019.desc">Funda oficialmente la Asociación Filarmónica del Pacífico, figura que ampara la Orquesta Filarmónica Alimapu, estableciendo sus valores y misión. Proyecto autogestionado y de carácter profesionalizante que busca acortar la distancia entre el mundo orquestal y la comunidad de la Región de Valparaíso.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2020</div>
       <div class="timeline-content">
-        <h3>Premio P!ensa, III Simposio y Orfeón Patrimonial</h3>
-        <p>Es reconocida como Joven Líder P!ensa por la Fundación Piensa, destacando su labor cultural. Participa como expositora en el III Simposio Internacional de Directoras de Orquesta (online), con una exposición sobre la cronología de mujeres directoras en Chile. Asume la dirección del Orfeón Patrimonial de Valparaíso y la transición a Banda de Conciertos, cargo que ejerció hasta principios de 2025.</p>
+        <h3 data-i18n="tray.2020.title">Premio P!ensa, III Simposio y Orfeón Patrimonial</h3>
+        <p data-i18n="tray.2020.desc">Es reconocida como Joven Líder P!ensa por la Fundación Piensa, destacando su labor cultural. Participa como expositora en el III Simposio Internacional de Directoras de Orquesta (online), con una exposición sobre la cronología de mujeres directoras en Chile. Asume la dirección del Orfeón Patrimonial de Valparaíso y la transición a Banda de Conciertos, cargo que ejerció hasta principios de 2025.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2021</div>
       <div class="timeline-content">
-        <h3>Premio Líderes Jóvenes — El Mercurio</h3>
-        <p>Recibe reconocimiento a nivel nacional con el "Premio Líderes Jóvenes" de El Mercurio, Revista Sábado y la Universidad Adolfo Ibáñez.</p>
+        <h3 data-i18n="tray.2021.title">Premio Líderes Jóvenes — El Mercurio</h3>
+        <p data-i18n="tray.2021.desc">Recibe reconocimiento a nivel nacional con el "Premio Líderes Jóvenes" de El Mercurio, Revista Sábado y la Universidad Adolfo Ibáñez.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2023</div>
       <div class="timeline-content">
-        <h3>Simposio Internacional de Mujeres Directoras</h3>
-        <p>Participa como expositora en el IV Simposio Internacional de Mujeres Directoras en Buenos Aires, compartiendo su experiencia en la dirección orquestal latinoamericana.</p>
+        <h3 data-i18n="tray.2023.title">Simposio Internacional de Mujeres Directoras</h3>
+        <p data-i18n="tray.2023.desc">Participa como expositora en el IV Simposio Internacional de Mujeres Directoras en Buenos Aires, compartiendo su experiencia en la dirección orquestal latinoamericana.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2024</div>
       <div class="timeline-content">
-        <h3>HUB de Directoras de Orquesta</h3>
-        <p>Participa del HUB de Directoras de Orquesta de Alejandra Urrutia y la Orquesta de Cámara del Municipal de Santiago, presentándose en el Teatro Municipal de Santiago y en el Municipal de Viña del Mar.</p>
+        <h3 data-i18n="tray.2024.title">HUB de Directoras de Orquesta</h3>
+        <p data-i18n="tray.2024.desc">Participa del HUB de Directoras de Orquesta de Alejandra Urrutia y la Orquesta de Cámara del Municipal de Santiago, presentándose en el Teatro Municipal de Santiago y en el Municipal de Viña del Mar.</p>
       </div>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-year">2025</div>
       <div class="timeline-content">
-        <h3>Plaza Sotomayor &amp; Trenes Culturales</h3>
-        <p>Se presenta en el escenario más importante de Valparaíso, en Plaza Sotomayor, bajo la actividad Trenes Culturales del programa del Ministerio de las Culturas. Continúa en el HUB de Directoras de Orquesta.</p>
+        <h3 data-i18n="tray.2025.title">Plaza Sotomayor &amp; Trenes Culturales</h3>
+        <p data-i18n="tray.2025.desc">Se presenta en el escenario más importante de Valparaíso, en Plaza Sotomayor, bajo la actividad Trenes Culturales del programa del Ministerio de las Culturas. Continúa en el HUB de Directoras de Orquesta.</p>
       </div>
     </div>
   </div>
@@ -204,45 +206,45 @@
 
 <!-- ════ LOGROS ════ -->
 <section id="logros">
-  <h2 class="logros-heading reveal">
+  <h2 class="logros-heading reveal" data-i18n="logros.heading">
     Logros que <em>resuenan</em><br>más allá del escenario
   </h2>
   <div class="logros-grid">
     <div class="logro-card reveal">
-      <span class="logro-year-tag">2017 &middot; Presente</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.1">2017 &middot; Presente</span>
       <span class="logro-icon">&#127931;</span>
-      <h3>Directora de la Orquesta Filarmónica Alimapu</h3>
-      <p>Fundó y dirige esta agrupación profesional autogestionada que lleva la música orquestal a teatros, iglesias, museos y escuelas de toda la Región de Valparaíso.</p>
+      <h3 data-i18n="logros.1.title">Directora de la Orquesta Filarmónica Alimapu</h3>
+      <p data-i18n="logros.1.desc">Fundó y dirige esta agrupación profesional autogestionada que lleva la música orquestal a teatros, iglesias, museos y escuelas de toda la Región de Valparaíso.</p>
     </div>
     <div class="logro-card reveal">
-      <span class="logro-year-tag">2024 &middot; 2025</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.2">2024 &middot; 2025</span>
       <span class="logro-icon">&#127932;</span>
-      <h3>HUB de Directoras de Orquesta</h3>
-      <p>Participó del HUB de Directoras de Alejandra Urrutia y la Orquesta de Cámara del Municipal de Santiago, presentándose en el Teatro Municipal de Santiago y en el Municipal de Viña del Mar.</p>
+      <h3 data-i18n="logros.2.title">HUB de Directoras de Orquesta</h3>
+      <p data-i18n="logros.2.desc">Participó del HUB de Directoras de Alejandra Urrutia y la Orquesta de Cámara del Municipal de Santiago, presentándose en el Teatro Municipal de Santiago y en el Municipal de Viña del Mar.</p>
     </div>
     <div class="logro-card reveal">
-      <span class="logro-year-tag">2025</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.3">2025</span>
       <span class="logro-icon">&#127758;</span>
-      <h3>Plaza Sotomayor — Trenes Culturales</h3>
-      <p>Se presentó en el escenario más importante de Valparaíso, en Plaza Sotomayor, bajo la actividad Trenes Culturales del Ministerio de las Culturas.</p>
+      <h3 data-i18n="logros.3.title">Plaza Sotomayor — Trenes Culturales</h3>
+      <p data-i18n="logros.3.desc">Se presentó en el escenario más importante de Valparaíso, en Plaza Sotomayor, bajo la actividad Trenes Culturales del Ministerio de las Culturas.</p>
     </div>
     <div class="logro-card reveal">
-      <span class="logro-year-tag">2020 &middot; 2021</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.4">2020 &middot; 2021</span>
       <span class="logro-icon">&#127942;</span>
-      <h3>Premios Jóvenes Líderes</h3>
-      <p>Reconocida con el "Premio Jóvenes Líderes 2020" de la Fundación Piensa y el "Premio Jóvenes Líderes 2021" de la Revista Sábado, El Mercurio y la Universidad Adolfo Ibáñez.</p>
+      <h3 data-i18n="logros.4.title">Premios Jóvenes Líderes</h3>
+      <p data-i18n="logros.4.desc">Reconocida con el "Premio Jóvenes Líderes 2020" de la Fundación Piensa y el "Premio Jóvenes Líderes 2021" de la Revista Sábado, El Mercurio y la Universidad Adolfo Ibáñez.</p>
     </div>
     <div class="logro-card reveal">
-      <span class="logro-year-tag">2023</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.5">2023</span>
       <span class="logro-icon">&#127760;</span>
-      <h3>Simposio Internacional de Mujeres Directoras</h3>
-      <p>Participó como expositora en el IV Simposio Internacional de Mujeres Directoras en Buenos Aires, Argentina.</p>
+      <h3 data-i18n="logros.5.title">Simposio Internacional de Mujeres Directoras</h3>
+      <p data-i18n="logros.5.desc">Participó como expositora en el IV Simposio Internacional de Mujeres Directoras en Buenos Aires, Argentina.</p>
     </div>
     <div class="logro-card reveal">
-      <span class="logro-year-tag">Presente</span>
+      <span class="logro-year-tag" data-i18n="logros.tag.6">Presente</span>
       <span class="logro-icon">&#127928;</span>
-      <h3>Violinista en proyectos musicales</h3>
-      <p>Miembro de la banda de rock sinfónico Pronoias, colaboradora de la Banda Halekin, y ha grabado con Ensamble Trasatlántico, Luxferre, Charawilla y Seba Vergara.</p>
+      <h3 data-i18n="logros.6.title">Violinista en proyectos musicales</h3>
+      <p data-i18n="logros.6.desc">Miembro de la banda de rock sinfónico Pronoias, colaboradora de la Banda Halekin, y ha grabado con Ensamble Trasatlántico, Luxferre, Charawilla y Seba Vergara.</p>
     </div>
   </div>
 </section>
@@ -250,36 +252,36 @@
 <!-- ════ PERFIL PROFESIONAL ════ -->
 <section id="roles">
   <div class="roles-header">
-    <p class="section-label reveal">Perfil profesional</p>
-    <h2 class="reveal">Áreas de <span>especialización</span></h2>
+    <p class="section-label reveal" data-i18n="roles.label">Perfil profesional</p>
+    <h2 class="reveal" data-i18n="roles.heading">Áreas de <span>especialización</span></h2>
   </div>
   <div class="roles-grid">
     <div class="role-category reveal">
       <div class="role-category-icon">&#127932;</div>
-      <h3>Dirección de orquesta</h3>
+      <h3 data-i18n="roles.1.title">Dirección de orquesta</h3>
       <ul>
-        <li>Fundadora y directora de la Orquesta Filarmónica Alimapu (2017 - Actual)</li>
-        <li>Directora de la Epic Orquesta (2023 - 2024)</li>
-        <li>Ha dirigido la Orquesta Sinfónica de Antofagasta, Orquesta de Cámara de Valdivia y Orquesta de Cámara del Municipal de Santiago</li>
-        <li>Formación con Rodolfo Fischer, Helmuth Reichel, Paolo Bortolameolli y Emmanuel Siffert</li>
+        <li data-i18n="roles.1.li1">Fundadora y directora de la Orquesta Filarmónica Alimapu (2017 - Actual)</li>
+        <li data-i18n="roles.1.li2">Directora de la Epic Orquesta (2023 - 2024)</li>
+        <li data-i18n="roles.1.li3">Ha dirigido la Orquesta Sinfónica de Antofagasta, Orquesta de Cámara de Valdivia y Orquesta de Cámara del Municipal de Santiago</li>
+        <li data-i18n="roles.1.li4">Formación con Rodolfo Fischer, Helmuth Reichel, Paolo Bortolameolli y Emmanuel Siffert</li>
       </ul>
     </div>
     <div class="role-category reveal">
       <div class="role-category-icon">&#127931;</div>
-      <h3>Violinista</h3>
+      <h3 data-i18n="roles.2.title">Violinista</h3>
       <ul>
-        <li>Grabaciones con Ensamble Trasatlántico, Luxferre, Charawilla y Seba Vergara</li>
-        <li>Miembro de la banda de rock sinfónico Pronoias</li>
-        <li>Colaboradora de la Banda Halekin</li>
+        <li data-i18n="roles.2.li1">Grabaciones con Ensamble Trasatlántico, Luxferre, Charawilla y Seba Vergara</li>
+        <li data-i18n="roles.2.li2">Miembro de la banda de rock sinfónico Pronoias</li>
+        <li data-i18n="roles.2.li3">Colaboradora de la Banda Halekin</li>
       </ul>
     </div>
     <div class="role-category reveal">
       <div class="role-category-icon">&#127760;</div>
-      <h3>Gestión cultural y docencia</h3>
+      <h3 data-i18n="roles.3.title">Gestión cultural y docencia</h3>
       <ul>
-        <li>Gestora cultural ganadora de múltiples fondos y becas</li>
-        <li>Docente en escuelas, impulsando la educación musical en niños y niñas</li>
-        <li>Expositora en el IV Simposio Internacional de Mujeres Directoras (Buenos Aires, 2023)</li>
+        <li data-i18n="roles.3.li1">Gestora cultural ganadora de múltiples fondos y becas</li>
+        <li data-i18n="roles.3.li2">Docente en escuelas, impulsando la educación musical en niños y niñas</li>
+        <li data-i18n="roles.3.li3">Expositora en el IV Simposio Internacional de Mujeres Directoras (Buenos Aires, 2023)</li>
       </ul>
     </div>
   </div>
@@ -288,34 +290,34 @@
 <!-- ════ ALIMAPU ════ -->
 <section id="alimapu">
   <div class="alimapu-inner">
-    <p class="section-label reveal">Proyecto estrella</p>
+    <p class="section-label reveal" data-i18n="alimapu.label">Proyecto estrella</p>
     <h2 class="reveal">Alimapu</h2>
-    <h3 class="reveal">Orquesta Filarmónica &middot; Valparaíso &middot; 2017</h3>
-    <p class="reveal">
+    <h3 class="reveal" data-i18n="alimapu.subtitle">Orquesta Filarmónica &middot; Valparaíso &middot; 2017</h3>
+    <p class="reveal" data-i18n="alimapu.p1">
       La Orquesta Filarmónica Alimapu es el proyecto más ambicioso de Danitza: una agrupación profesional, autogestionada y autónoma que aporta al desarrollo humano y a la difusión músico-cultural desde Valparaíso.
     </p>
-    <p class="reveal">
+    <p class="reveal" data-i18n="alimapu.p2">
       Alimapu genera conciertos en lugares tan diversos como el Palacio Rioja, el Museo Marítimo Nacional, la Catedral de Valparaíso, plazas públicas y establecimientos educacionales, transformando los paradigmas sinfónicos tradicionales e incorporando repertorios latinoamericanos en sus programas.
     </p>
-    <p class="reveal">
+    <p class="reveal" data-i18n="alimapu.p3">
       Opera a través de comités bajo la Asociación Filarmónica del Pacífico, priorizando la inclusión y la equidad de género en todo su quehacer.
     </p>
     <div class="stats-row">
       <div class="stat reveal">
         <h4>500+</h4>
-        <p>músicos dirigidos en<br>una sola función</p>
+        <p data-i18n="alimapu.stat1">músicos dirigidos en<br>una sola función</p>
       </div>
       <div class="stat reveal">
         <h4>9</h4>
-        <p>temporadas de conciertos<br>en la UV</p>
+        <p data-i18n="alimapu.stat2">temporadas de conciertos<br>en la UV</p>
       </div>
       <div class="stat reveal">
         <h4>2017</h4>
-        <p>inicio del proyecto<br>benéfico fundador</p>
+        <p data-i18n="alimapu.stat3">inicio del proyecto<br>benéfico fundador</p>
       </div>
       <div class="stat reveal">
         <h4>&infin;</h4>
-        <p>comunidades<br>alcanzadas</p>
+        <p data-i18n="alimapu.stat4">comunidades<br>alcanzadas</p>
       </div>
     </div>
   </div>
@@ -323,8 +325,8 @@
 
 <!-- ════ CONTACTO ════ -->
 <section id="contacto">
-  <p class="section-label reveal">Contacto</p>
-  <p class="contacto-intro reveal">
+  <p class="section-label reveal" data-i18n="contacto.label">Contacto</p>
+  <p class="contacto-intro reveal" data-i18n="contacto.intro">
     Para proyectos, colaboraciones o clases de música
   </p>
   <div class="contacto-grid">
@@ -366,17 +368,18 @@
 <footer>
   <div>
     <div class="footer-name">Danitza <span>Villarroel</span> Orrego</div>
-    <div class="footer-tagline">Directora de Orquesta &middot; Violinista &middot; Profesora &middot; Gestora Cultural &middot; Valparaíso, Chile</div>
+    <div class="footer-tagline" data-i18n="footer.tagline">Directora de Orquesta &middot; Violinista &middot; Profesora &middot; Gestora Cultural &middot; Valparaíso, Chile</div>
   </div>
-  <div class="footer-right">
+  <div class="footer-right" data-i18n="footer.quote">
     "La música como puente<br>entre el arte y la comunidad."
   </div>
 </footer>
 
-<div class="copyright">
+<div class="copyright" data-i18n="footer.copyright">
   &copy; 2026 Todos los derechos reservados. Desarrollado con IA por <a href="https://www.martinmiranda.org" target="_blank" rel="noopener noreferrer">martinmiranda.org</a>
 </div>
 
+<script src="i18n.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
