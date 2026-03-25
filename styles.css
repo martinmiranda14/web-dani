@@ -515,105 +515,99 @@ body::before {
   margin-bottom: 16px;
 }
 
-/* ─── ROLES ─── */
+/* ─── ROLES / PERFIL PROFESIONAL ─── */
 #roles {
   padding: 80px 80px 100px;
   background: var(--dark-mid);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
 }
 
-.roles-text h2 {
+.roles-header {
+  margin-bottom: 60px;
+}
+
+.roles-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 40px;
 }
 
-.roles-text h2 span { color: var(--gold); }
+.roles-header h2 span { color: var(--gold); }
 
-.roles-list {
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.role-category {
+  padding: 40px 32px;
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  position: relative;
+  transition: border-color 0.4s;
+}
+
+.role-category:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+.role-category::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.role-category:hover::after {
+  transform: scaleX(1);
+}
+
+.role-category-icon {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.role-category h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.role-category ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
-.roles-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(240, 232, 213, 0.75);
-}
-
-.roles-list li::before {
-  content: '\2014';
-  color: var(--gold);
-  font-family: 'Josefin Sans', sans-serif;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.roles-visual {
+.role-category li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(240, 232, 213, 0.7);
+  font-weight: 300;
+  padding-left: 20px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.circle-outer {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  animation: spinSlow 40s linear infinite;
-}
-
-.circle-inner {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: spinSlow 20s linear infinite reverse;
-}
-
-.circle-core {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.2) 0%, transparent 70%);
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.orbit-dot {
+.role-category li::before {
+  content: '';
   position: absolute;
+  left: 0;
+  top: 10px;
   width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  height: 1px;
   background: var(--gold);
-  box-shadow: 0 0 8px var(--gold);
 }
-
-.orbit-dot:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
-.orbit-dot:nth-child(2) { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
-.orbit-dot:nth-child(3) { top: 50%; left: 0; transform: translate(-50%, -50%); }
-.orbit-dot:nth-child(4) { top: 50%; right: 0; transform: translate(50%, -50%); }
 
 @keyframes spinSlow {
   from { transform: rotate(0deg); }
@@ -811,6 +805,7 @@ footer {
   .hero-right { display: none; }
   .hero-left { padding: 80px 40px; }
   .intro-columns { grid-template-columns: 1fr; }
+  .intro-photo { max-width: 400px; margin: 0 auto; }
 
   #intro,
   #trayectoria,
@@ -822,12 +817,8 @@ footer {
   .logros-grid { grid-template-columns: 1fr; }
   .contacto-grid { grid-template-columns: 1fr; }
 
-  #roles {
-    grid-template-columns: 1fr;
-    padding: 60px 40px;
-  }
-
-  .roles-visual { display: none; }
+  #roles { padding: 60px 40px; }
+  .roles-grid { grid-template-columns: 1fr; }
   .stats-row { flex-wrap: wrap; gap: 40px; }
   .scroll-hint { left: 40px; }
   .divider { padding-left: 40px; padding-right: 40px; }
