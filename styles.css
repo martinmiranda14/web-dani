@@ -262,7 +262,6 @@ body::before {
 /* ─── INTRO ─── */
 #intro {
   padding: 80px 80px 100px;
-  max-width: 900px;
 }
 
 .intro-quote {
@@ -295,6 +294,32 @@ body::before {
   color: rgba(240, 232, 213, 0.75);
   font-weight: 300;
   margin-bottom: 20px;
+}
+
+.intro-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  filter: grayscale(15%) contrast(1.05);
+}
+
+.intro-photo::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  pointer-events: none;
+}
+
+.intro-photo {
+  position: relative;
 }
 
 /* ─── SECTION LABEL ─── */
@@ -785,6 +810,7 @@ footer {
   #hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
   .hero-left { padding: 80px 40px; }
+  .intro-columns { grid-template-columns: 1fr; }
 
   #intro,
   #trayectoria,
