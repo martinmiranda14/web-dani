@@ -185,8 +185,8 @@ body::before {
   position: absolute;
   bottom: 40px;
   right: 40px;
-  width: 280px;
-  height: 340px;
+  width: 200px;
+  height: 250px;
   z-index: 3;
   opacity: 0;
   animation: fadeUp 1.2s 1s forwards;
