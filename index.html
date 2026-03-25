@@ -10,6 +10,22 @@
 </head>
 <body>
 
+<!-- ════ NAV ════ -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">DVO</a>
+  <div class="nav-links">
+    <a href="#intro">Biografía</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#logros">Logros</a>
+    <a href="#roles">Perfil</a>
+    <a href="#alimapu">Alimapu</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
 <!-- ════ HERO ════ -->
 <section id="hero">
   <div class="hero-left">
@@ -358,7 +374,7 @@
 </footer>
 
 <div class="copyright">
-  &copy; 2026 Todos los derechos reservados. Desarrollado con IA por <a href="https://martinmiranda.org" target="_blank" rel="noopener noreferrer">martinmiranda.org</a>
+  &copy; 2026 Todos los derechos reservados. Desarrollado con IA por <a href="https://www.martinmiranda.org" target="_blank" rel="noopener noreferrer">martinmiranda.org</a>
 </div>
 
 <script>
@@ -372,6 +388,40 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ─── NAV: shrink on scroll ───
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── NAV: active section highlight ───
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
+  sections.forEach(s => sectionObserver.observe(s));
+
+  // ─── NAV: mobile toggle ───
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinksContainer = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    navLinksContainer.classList.toggle('open');
+    toggle.classList.toggle('open');
+  });
+  navLinksContainer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksContainer.classList.remove('open');
+      toggle.classList.remove('open');
+    });
+  });
 </script>
 </body>
 </html>
