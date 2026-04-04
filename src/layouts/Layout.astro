@@ -1,0 +1,120 @@
+---
+import { t } from '../i18n/ui';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="lang-es">{title ?? t('es', 'meta.title')}</title>
+  <meta name="description" content={description ?? t('es', 'meta.description')} />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-shark.svg" />
+</head>
+<body>
+  <slot />
+
+  <script is:inline>
+    // ─── i18n toggle ───
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+
+      document.querySelectorAll('.lang-es').forEach(el => {
+        el.style.display = lang === 'es' ? '' : 'none';
+      });
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = lang === 'en' ? '' : 'none';
+      });
+
+      const toggleBtn = document.querySelector('.lang-toggle');
+      if (toggleBtn) toggleBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+
+      // Update title and meta
+      const titles = document.querySelectorAll('title');
+      if (titles.length > 0) {
+        const esTitle = document.querySelector('[data-meta-title-es]');
+        const enTitle = document.querySelector('[data-meta-title-en]');
+        if (esTitle && enTitle) {
+          document.title = lang === 'es' ? esTitle.getAttribute('data-meta-title-es') : enTitle.getAttribute('data-meta-title-en');
+        }
+      }
+
+      localStorage.setItem('lang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('lang') || 'es';
+      setLang(savedLang);
+
+      const toggleBtn = document.querySelector('.lang-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const current = localStorage.getItem('lang') || 'es';
+          setLang(current === 'es' ? 'en' : 'es');
+        });
+      }
+    });
+
+    // ─── Scroll animations ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── NAV: shrink on scroll ───
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ─── NAV: active section highlight ───
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // ─── NAV: mobile toggle ───
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    navLinksContainer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
+
+  <div
+    data-meta-title-es={t('es', 'meta.title')}
+    data-meta-title-en={t('en', 'meta.title')}
+    style="display:none"
+  ></div>
+</body>
+</html>

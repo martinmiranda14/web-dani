@@ -1,0 +1,23 @@
+---
+subtitle_es: "Orquesta Filarmónica · Valparaíso · 2017"
+subtitle_en: "Philharmonic Orchestra · Valparaíso · 2017"
+p1_es: "La Orquesta Filarmónica Alimapu es el proyecto más ambicioso de Danitza: una agrupación profesional, autogestionada y autónoma que aporta al desarrollo humano y a la difusión músico-cultural desde Valparaíso."
+p1_en: "The Alimapu Philharmonic Orchestra is Danitza's most ambitious project: a professional, self-managed, and autonomous ensemble that contributes to human development and cultural-musical outreach from Valparaíso."
+p2_es: "Alimapu genera conciertos en lugares tan diversos como el Palacio Rioja, el Museo Marítimo Nacional, la Catedral de Valparaíso, plazas públicas y establecimientos educacionales, transformando los paradigmas sinfónicos tradicionales e incorporando repertorios latinoamericanos en sus programas."
+p2_en: "Alimapu produces concerts in venues as diverse as Palacio Rioja, the National Maritime Museum, the Cathedral of Valparaíso, public squares, and schools, transforming traditional symphonic paradigms and incorporating Latin American repertoires into their programs."
+p3_es: "Opera a través de comités bajo la Asociación Filarmónica del Pacífico, priorizando la inclusión y la equidad de género en todo su quehacer."
+p3_en: "It operates through committees under the Pacific Philharmonic Association, prioritizing inclusion and gender equity in all its activities."
+stats:
+  - value: "500+"
+    label_es: "músicos dirigidos en una sola función"
+    label_en: "musicians conducted in a single performance"
+  - value: "9"
+    label_es: "temporadas de conciertos en la UV"
+    label_en: "concert seasons at UV"
+  - value: "2017"
+    label_es: "inicio del proyecto benéfico fundador"
+    label_en: "start of the founding charity project"
+  - value: "∞"
+    label_es: "comunidades alcanzadas"
+    label_en: "communities reached"
+---

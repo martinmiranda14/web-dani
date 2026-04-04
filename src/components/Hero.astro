@@ -1,0 +1,59 @@
+---
+import { t } from '../i18n/ui';
+---
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">
+      <span class="lang-es">{t('es', 'hero.eyebrow')}</span>
+      <span class="lang-en">{t('en', 'hero.eyebrow')}</span>
+    </p>
+    <h1 class="hero-name">
+      Danitza<br>
+      <span>Villarroel</span>
+      Orrego
+    </h1>
+    <p class="hero-subtitle">
+      <span class="lang-es">{t('es', 'hero.subtitle')}</span>
+      <span class="lang-en">{t('en', 'hero.subtitle')}</span>
+    </p>
+    <p class="hero-location">
+      <span class="lang-es">{t('es', 'hero.location')}</span>
+      <span class="lang-en">{t('en', 'hero.location')}</span>
+    </p>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-visual"></div>
+    <div class="staff-lines">
+      <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="120" x2="600" y2="120" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="0" y1="148" x2="600" y2="148" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="0" y1="176" x2="600" y2="176" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="0" y1="204" x2="600" y2="204" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="0" y1="232" x2="600" y2="232" stroke="#c9a84c" stroke-width="0.5"/>
+        <text x="80" y="220" font-size="130" fill="rgba(201,168,76,0.15)" font-family="serif">&#119070;</text>
+        <text x="260" y="165" font-size="40" fill="rgba(201,168,76,0.2)" font-family="serif">&#9833;</text>
+        <text x="340" y="185" font-size="36" fill="rgba(201,168,76,0.15)" font-family="serif">&#9834;</text>
+        <text x="420" y="158" font-size="44" fill="rgba(201,168,76,0.18)" font-family="serif">&#9835;</text>
+        <text x="490" y="180" font-size="32" fill="rgba(201,168,76,0.12)" font-family="serif">&#9836;</text>
+      </svg>
+    </div>
+    <div class="floating-notes">
+      <span class="note" style="left:30%;top:20%;--dur:7s;--delay:0s;--rot:-8deg">&#9833;</span>
+      <span class="note" style="left:55%;top:60%;--dur:8s;--delay:1.5s;--rot:5deg">&#9834;</span>
+      <span class="note" style="left:75%;top:35%;--dur:6s;--delay:3s;--rot:-12deg">&#9835;</span>
+      <span class="note" style="left:20%;top:70%;--dur:9s;--delay:2s;--rot:8deg">&#9836;</span>
+    </div>
+    <div class="big-initial">D</div>
+
+    <div class="hero-photo-frame">
+      <img src="/img/dani.png" alt="Danitza Villarroel Orrego" />
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span class="lang-es">{t('es', 'hero.scroll')}</span>
+    <span class="lang-en">{t('en', 'hero.scroll')}</span>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import { t } from '../i18n/ui';
+
+const entries = await getCollection('alimapu');
+const data = entries[0]?.data;
+---
+<section id="alimapu">
+  <div class="alimapu-inner">
+    <p class="section-label reveal">
+      <span class="lang-es">{t('es', 'alimapu.label')}</span>
+      <span class="lang-en">{t('en', 'alimapu.label')}</span>
+    </p>
+    <h2 class="reveal">Alimapu</h2>
+    <h3 class="reveal">
+      <span class="lang-es">{data?.subtitle_es}</span>
+      <span class="lang-en">{data?.subtitle_en}</span>
+    </h3>
+    <p class="reveal">
+      <span class="lang-es">{data?.p1_es}</span>
+      <span class="lang-en">{data?.p1_en}</span>
+    </p>
+    <p class="reveal">
+      <span class="lang-es">{data?.p2_es}</span>
+      <span class="lang-en">{data?.p2_en}</span>
+    </p>
+    <p class="reveal">
+      <span class="lang-es">{data?.p3_es}</span>
+      <span class="lang-en">{data?.p3_en}</span>
+    </p>
+    <div class="stats-row">
+      {data?.stats.map((stat) => (
+        <div class="stat reveal">
+          <h4>{stat.value}</h4>
+          <p>
+            <span class="lang-es" set:html={stat.label_es} />
+            <span class="lang-en" set:html={stat.label_en} />
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

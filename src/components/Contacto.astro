@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import { t } from '../i18n/ui';
+
+const entries = await getCollection('contacto');
+const sorted = entries.sort((a, b) => a.data.order - b.data.order);
+
+const iconSvg: Record<string, string> = {
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <circle cx="12" cy="12" r="5"/>
+    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+  </svg>`,
+  linkedin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/>
+    <circle cx="4" cy="4" r="2"/>
+  </svg>`,
+  facebook: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg>`,
+};
+---
+<section id="contacto">
+  <p class="section-label reveal">
+    <span class="lang-es">{t('es', 'contacto.label')}</span>
+    <span class="lang-en">{t('en', 'contacto.label')}</span>
+  </p>
+  <p class="contacto-intro reveal">
+    <span class="lang-es">{t('es', 'contacto.intro')}</span>
+    <span class="lang-en">{t('en', 'contacto.intro')}</span>
+  </p>
+  <div class="contacto-grid">
+    {sorted.map(({ data }) => (
+      <a href={data.url} target="_blank" rel="noopener noreferrer" class="contacto-card reveal">
+        <span class="contacto-icon" set:html={iconSvg[data.icon]} />
+        <span class="contacto-label">{data.platform}</span>
+        <span class="contacto-handle">{data.handle}</span>
+      </a>
+    ))}
+  </div>
+</section>

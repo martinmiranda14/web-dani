@@ -1,0 +1,21 @@
+---
+import { t } from '../i18n/ui';
+---
+<footer>
+  <div>
+    <div class="footer-name">Danitza <span>Villarroel</span> Orrego</div>
+    <div class="footer-tagline">
+      <span class="lang-es">{t('es', 'footer.tagline')}</span>
+      <span class="lang-en">{t('en', 'footer.tagline')}</span>
+    </div>
+  </div>
+  <div class="footer-right">
+    <span class="lang-es" set:html={t('es', 'footer.quote')} />
+    <span class="lang-en" set:html={t('en', 'footer.quote')} />
+  </div>
+</footer>
+
+<div class="copyright">
+  <span class="lang-es" set:html={t('es', 'footer.copyright')} />
+  <span class="lang-en" set:html={t('en', 'footer.copyright')} />
+</div>

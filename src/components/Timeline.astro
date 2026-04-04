@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import { t } from '../i18n/ui';
+
+const entries = await getCollection('trayectoria');
+const sorted = entries.sort((a, b) => a.data.order - b.data.order);
+---
+<section id="trayectoria">
+  <p class="section-label reveal">
+    <span class="lang-es">{t('es', 'tray.label')}</span>
+    <span class="lang-en">{t('en', 'tray.label')}</span>
+  </p>
+  <div class="timeline">
+    {sorted.map(({ data }) => (
+      <div class="timeline-item reveal">
+        <div class="timeline-year">{data.year}</div>
+        <div class="timeline-content">
+          <h3>
+            <span class="lang-es">{data.title_es}</span>
+            <span class="lang-en">{data.title_en}</span>
+          </h3>
+          <p>
+            <span class="lang-es">{data.desc_es}</span>
+            <span class="lang-en">{data.desc_en}</span>
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+
+const bioEntries = await getCollection('bio');
+const bio = bioEntries[0]?.data;
+---
+<div class="divider reveal">
+  <div class="divider-line"></div>
+  <span class="divider-glyph">&#9833;</span>
+  <div class="divider-line"></div>
+</div>
+
+<section id="intro">
+  <blockquote class="intro-quote reveal">
+    <span class="lang-es">{bio?.quote_es}</span>
+    <span class="lang-en">{bio?.quote_en}</span>
+  </blockquote>
+  <div class="intro-columns">
+    <div class="intro-left">
+      <p class="intro-text reveal">
+        <span class="lang-es">{bio?.p1_es}</span>
+        <span class="lang-en">{bio?.p1_en}</span>
+      </p>
+      <p class="intro-text reveal">
+        <span class="lang-es">{bio?.p2_es}</span>
+        <span class="lang-en">{bio?.p2_en}</span>
+      </p>
+      <p class="intro-text reveal">
+        <span class="lang-es">{bio?.p3_es}</span>
+        <span class="lang-en">{bio?.p3_en}</span>
+      </p>
+    </div>
+    <div class="intro-photo reveal">
+      <img src={bio?.photo} alt="Danitza Villarroel Orrego - Mi historia" />
+    </div>
+  </div>
+</section>
