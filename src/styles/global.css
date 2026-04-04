@@ -1017,12 +1017,20 @@ footer {
 }
 
 /* ─── i18n SHOW/HIDE ─── */
-.lang-en { display: none; }
-html[data-lang="en"] .lang-es { display: none; }
-html[data-lang="en"] .lang-en { display: inline; }
-html[data-lang="en"] p .lang-en,
-html[data-lang="en"] blockquote .lang-en,
-html[data-lang="en"] div .lang-en,
-html[data-lang="en"] li .lang-en { display: inline; }
-html[data-lang="es"] .lang-en { display: none; }
-html[data-lang="es"] .lang-es { display: inline; }
+.lang-en { display: none !important; }
+
+html[data-lang="en"] .lang-es { display: none !important; }
+html[data-lang="en"] .lang-en { display: inline !important; }
+
+/* Block-level lang containers (grids, timeline) */
+html[data-lang="en"] .timeline.lang-en,
+html[data-lang="en"] .logros-grid.lang-en,
+html[data-lang="en"] .roles-grid.lang-en { display: grid !important; }
+html[data-lang="en"] .timeline.lang-en { display: block !important; }
+
+html[data-lang="es"] .lang-en { display: none !important; }
+html[data-lang="es"] .lang-es { display: inline !important; }
+html[data-lang="es"] .timeline.lang-es,
+html[data-lang="es"] .logros-grid.lang-es,
+html[data-lang="es"] .roles-grid.lang-es { display: grid !important; }
+html[data-lang="es"] .timeline.lang-es { display: block !important; }

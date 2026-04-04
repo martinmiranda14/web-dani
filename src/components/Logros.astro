@@ -3,29 +3,31 @@ import { getCollection } from 'astro:content';
 import { t } from '../i18n/ui';
 
 const entries = await getCollection('logros');
-const sorted = entries.sort((a, b) => a.data.order - b.data.order);
+const esEntries = entries.filter(e => e.data.lang === 'es').sort((a, b) => a.data.order - b.data.order);
+const enEntries = entries.filter(e => e.data.lang === 'en').sort((a, b) => a.data.order - b.data.order);
 ---
 <section id="logros">
   <h2 class="logros-heading reveal">
     <span class="lang-es" set:html={t('es', 'logros.heading')} />
     <span class="lang-en" set:html={t('en', 'logros.heading')} />
   </h2>
-  <div class="logros-grid">
-    {sorted.map(({ data }) => (
+  <div class="logros-grid lang-es">
+    {esEntries.map(({ data }) => (
       <div class="logro-card reveal">
-        <span class="logro-year-tag">
-          <span class="lang-es">{data.tag_es}</span>
-          <span class="lang-en">{data.tag_en}</span>
-        </span>
+        <span class="logro-year-tag">{data.tag}</span>
         <span class="logro-icon">{data.icon}</span>
-        <h3>
-          <span class="lang-es">{data.title_es}</span>
-          <span class="lang-en">{data.title_en}</span>
-        </h3>
-        <p>
-          <span class="lang-es">{data.desc_es}</span>
-          <span class="lang-en">{data.desc_en}</span>
-        </p>
+        <h3>{data.title}</h3>
+        <p>{data.desc}</p>
+      </div>
+    ))}
+  </div>
+  <div class="logros-grid lang-en">
+    {enEntries.map(({ data }) => (
+      <div class="logro-card reveal">
+        <span class="logro-year-tag">{data.tag}</span>
+        <span class="logro-icon">{data.icon}</span>
+        <h3>{data.title}</h3>
+        <p>{data.desc}</p>
       </div>
     ))}
   </div>
